@@ -43,3 +43,5 @@ DISCORD_TOKEN=TOKEN
 ---
 
 ### Demo
+
+![1000401309](https://github.com/user-attachments/assets/07b76186-89e9-40f3-a8a7-97f048892941)
