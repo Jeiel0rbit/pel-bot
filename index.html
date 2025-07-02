@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas para o Bot PEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 
+    ===================================================================
+    |                                                                 |
+    |                      ARQUIVO: index.html                        |
+    |                                                                 |
+    ===================================================================
+    -->
+    <div id="index" class="p-4 md:p-8 min-h-screen flex flex-col items-center justify-center">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-2xl w-full text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-4">Bot PEL</h1>
+            <p class="text-gray-600 mb-8 text-lg">
+                Um bot para o Discord focado checar redirecionamentos de links.
+            </p>
+            <a href="https://discord.com/oauth2/authorize?client_id=1389958552029892698&permissions=277025392640&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition mb-8">
+                ➕ Instalar o Bot no seu Servidor
+            </a>
+            <div class="mt-8 border-t pt-6">
+                <nav class="flex items-center justify-center space-x-6">
+                    <a href="#terms" onclick="showPage('terms-page')" class="text-indigo-600 hover:text-indigo-800 font-medium">Termos de Serviço</a>
+                    <a href="#privacy" onclick="showPage('privacy-page')" class="text-indigo-600 hover:text-indigo-800 font-medium">Política de Privacidade</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    ===================================================================
+    |                                                                 |
+    |                      ARQUIVO: terms.html                        |
+    |                                                                 |
+    ===================================================================
+    -->
+    <div id="terms-page" class="hidden p-4 md:p-8 min-h-screen flex flex-col items-center justify-center">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl w-full">
+            <h1 class="text-3xl font-bold text-gray-900 mb-6">Termos de Serviço</h1>
+            <div class="space-y-4 text-gray-700">
+                <p>Ao adicionar e/ou utilizar o bot PEL em seu servidor Discord, você concorda com os seguintes termos:</p>
+                
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">1. Uso do Comando /check</h2>
+                <p>
+                    O comando <code>/check &lt;URL&gt;</code> foi desenvolvido para verificar links de destino. O bot PEL processa a URL enviada para análise, mas não armazena a URL em si, nem o servidor ou usuário que a enviou.
+                </p>
+
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">2. Coleta de Dados</h2>
+                <p>
+                    O bot PEL <strong class="text-red-600">NÃO</strong> coleta informações sobre os servidores onde está instalado. A única informação coletada ativamente são os relatórios de erros que podem ocorrer durante a execução de um comando.
+                </p>
+
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">3. Finalidade da Coleta de Erros</h2>
+                <p>
+                    Os logs de erros são utilizados exclusivamente para analisar e corrigir falhas, bugs ou outros problemas adventos. Isso me ajuda a melhorar a estabilidade e a funcionalidade do bot. Esses logs não contêm informações de identificação pessoal ou dados sensíveis do servidor.
+                </p>
+
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">4. Responsabilidade</h2>
+                <p>
+                    O bot é fornecido "como está". Não me responsabilizo por quaisquer problemas ou danos que possam surgir do seu uso ou modificação. É sua responsabilidade garantir que o uso do bot esteja em conformidade com as regras e diretrizes do Discord, bem como com as leis aplicáveis.
+                </p>
+            </div>
+            <div class="mt-8 border-t pt-6 text-center">
+                <a href="#index" onclick="showPage('index')" class="text-indigo-600 hover:text-indigo-800 font-medium">&larr; Voltar para a página inicial</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    ===================================================================
+    |                                                                 |
+    |                    ARQUIVO: privacy.html                        |
+    |                                                                 |
+    ===================================================================
+    -->
+    <div id="privacy-page" class="hidden p-4 md:p-8 min-h-screen flex flex-col items-center justify-center">
+        <div class="bg-white p-8 rounded-xl shadow-lg max-w-3xl w-full">
+            <h1 class="text-3xl font-bold text-gray-900 mb-6">Política de Privacidade</h1>
+            <div class="space-y-4 text-gray-700">
+                <p>Esta Política de Privacidade descreve como o bot PEL lida com as informações. Sua privacidade é nossa prioridade.</p>
+
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">Informações que Não Coletamos</h2>
+                <p>O bot PEL <strong class="text-red-600">NÃO</strong> coleta, armazena:</p>
+                <ul class="list-disc list-inside space-y-2 pl-4">
+                    <li>Conteúdo de mensagens em seus canais.</li>
+                    <li>Informações sobre os membros do seu servidor.</li>
+                    <li>Informações sobre o servidor (nome, ID, canais, etc.).</li>
+                    <li>As URLs que você ou outros usuários enviam através do comando <code>/check</code>.</li>
+                    <li>Qualquer tipo de informação de identificação pessoal (PII).</li>
+                </ul>
+
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">Informações que Coletamos</h2>
+                <p>
+                    A única informação que o bot PEL coleta são os <strong class="text-green-600">relatórios de erros automáticos</strong>.
+                </p>
+                <p>
+                    Quando ocorre um erro inesperado durante a operação do bot (por exemplo, ao usar o comando <code>/check</code>), um log de erro é gerado. Este log contém informações técnicas sobre o erro, como a pilha de chamadas (stack trace) e o tipo de erro, para que posso diagnosticar e corrigir o problema.
+                </p>
+                <p>
+                    Esses logs são anônimos e não estão vinculados a um usuário ou servidor específico.
+                </p>
+
+                <h2 class="text-xl font-semibold text-gray-800 pt-4">Como uso essas Informações</h2>
+                <p>
+                    Os dados de erro coletados são usados com o único propósito de manter e melhorar a estabilidade e o desempenho do bot PEL. Analiso esses logs para identificar bugs e implementar correções em futuras atualizações.
+                </p>
+            </div>
+             <div class="mt-8 border-t pt-6 text-center">
+                <a href="#index" onclick="showPage('index')" class="text-indigo-600 hover:text-indigo-800 font-medium">&larr; Voltar para a página inicial</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simples sistema de navegação para página única
+        const pages = ['index', 'terms-page', 'privacy-page'];
+
+        function showPage(pageId) {
+            pages.forEach(id => {
+                const page = document.getElementById(id);
+                if (page) {
+                    page.classList.add('hidden');
+                }
+            });
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.remove('hidden');
+            }
+            window.location.hash = pageId === 'index' ? '' : pageId.replace('-page', '');
+        }
+
+        // Mostrar a página correta com base no hash da URL ao carregar
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash === 'terms') {
+                showPage('terms-page');
+            } else if (hash === 'privacy') {
+                showPage('privacy-page');
+            } else {
+                showPage('index');
+            }
+        });
+    </script>
+
+</body>
+</html>
